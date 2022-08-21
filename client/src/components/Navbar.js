@@ -6,7 +6,7 @@ import { useState } from 'react';
 
 const Navbar = () => {
   const [showLogout, setShowLogout] = useState(false);
-  const { toggleSidebar } = useAppContext();
+  const { toggleSidebar, logoutUser, user } = useAppContext();
   return (
     <Wrapper>
       <div className='nav-center'>
@@ -24,15 +24,11 @@ const Navbar = () => {
             onClick={() => setShowLogout(!showLogout)}
           >
             <FaUserCircle />
-            enes
+            {user?.name}
             <FaCaretDown />
           </button>
           <div className={showLogout ? 'dropdown show-dropdown' : 'dropdown'}>
-            <button
-              type='button'
-              className='dropdown-btn'
-              onClick={() => console.log('logout user')}
-            >
+            <button type='button' className='dropdown-btn' onClick={logoutUser}>
               Logout
             </button>
           </div>
