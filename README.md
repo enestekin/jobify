@@ -1,4 +1,4 @@
-# jobify a MERN stack app with
+# jobify a MERN stack app.
 
 demo: https://enes-jobify.herokuapp.com/
 
