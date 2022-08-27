@@ -222,7 +222,7 @@ const AppProvider = ({ children }) => {
         payload: { jobs, totalJobs, numOfPages },
       });
     } catch (error) {
-      console.log(error);
+      logoutUser();
     }
     clearAlert();
   };
@@ -276,8 +276,7 @@ const AppProvider = ({ children }) => {
         },
       });
     } catch (error) {
-      console.log(error.response);
-      // logoutUser()
+      logoutUser();
     }
 
     clearAlert();
